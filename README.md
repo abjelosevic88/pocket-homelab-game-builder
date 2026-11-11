@@ -68,7 +68,7 @@ Through [Pocket Core](https://github.com/abjelosevic88/pocket-homelab-core) — 
 | Pocket Music, Voice | Music for a level; a recording as a sound |
 | Pocket Translate | A copy of a game with every word on the screen in another language |
 | Pocket Puzzlecraft | Turn one of your mazes into a maze game to walk through |
-| Pocket Chat, Email, Contacts | Send the link to play to a chat, or to people from your address book |
+| Pocket Chat, Mail, Contacts | Send the link to play to a chat, or to people from your address book |
 | Pocket Blog, Forum, Family | A draft post with the game's picture, a topic asking what people think, a note on the family board |
 | Pocket Calendar | Plan a game night or a play-test, with the link to play |
 | Pocket Tasks, Projects, Notes | A game's to-dos as tasks; an issue for a bug; the whole game written down as a note |

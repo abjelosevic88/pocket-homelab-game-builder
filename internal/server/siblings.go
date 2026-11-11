@@ -69,7 +69,7 @@ var (
 	appBlog      = pocketApp{"blog", "Pocket Blog", []string{scopeBlogWrite}, "Write a blog post about a game, with its picture and the link to play it"}
 	appChat      = pocketApp{"chat", "Pocket Chat", []string{scopeChatRead, scopeChatWrite}, "Send the link to play a game to a chat"}
 	appForum     = pocketApp{"forum", "Pocket Forum", []string{scopeForumRead, scopeForumWrite}, "Start a topic about a game in a forum, to ask what people think"}
-	appEmail     = pocketApp{"email", "Pocket Email", []string{scopeMailSend}, "Send someone the link to play a game"}
+	appEmail     = pocketApp{"mail", "Pocket Mail", []string{scopeMailSend}, "Send someone the link to play a game by email"}
 	appContacts  = pocketApp{"contacts", "Pocket Contacts", []string{scopeContactsRead}, "Choose who to send a game to from your address book"}
 	appTasks     = pocketApp{"tasks", "Pocket Tasks", []string{scopeTasksRead, scopeTasksWrite}, "Put what is still to do on a game in your to-do list"}
 	appProjects  = pocketApp{"projects", "Pocket Projects", []string{scopeProjectsRead, scopeProjectsWrite}, "Make an issue from a game: a bug someone found, or the next thing to build"}

@@ -6,7 +6,7 @@ export interface APIToken { id: number; user_id: number; name: string; prefix: s
 
 export type ConnMode = 'core' | 'direct' | 'off'
 export type ConnVia = 'core' | 'direct' | ''
-export type AppSlug = 'photos' | 'files' | 'draw' | 'photolab' | 'music' | 'voice' | 'translate' | 'puzzlecraft' | 'blog' | 'chat' | 'forum' | 'email' | 'contacts' | 'tasks' | 'projects' | 'notes' | 'calendar' | 'family' | 'alerts'
+export type AppSlug = 'photos' | 'files' | 'draw' | 'photolab' | 'music' | 'voice' | 'translate' | 'puzzlecraft' | 'blog' | 'chat' | 'forum' | 'mail' | 'contacts' | 'tasks' | 'projects' | 'notes' | 'calendar' | 'family' | 'alerts'
 type ConnFields = { [K in AppSlug as `${K}_mode`]: ConnMode } & { [K in AppSlug as `${K}_via`]: ConnVia } & { [K in AppSlug as `${K}_detail` | `${K}_url` | `${K}_token` | `${K}_public_url` | `${K}_open_url`]: string } & { [K in AppSlug as `${K}_configured`]: boolean }
 
 export type Settings = ConnFields & {

@@ -207,7 +207,7 @@ export function ShareDialog({ game, onClose, onChange }: { game: Game; onClose: 
           <div className="row"><button type="button" className="btn primary" disabled={!state('chat', 'chat:write').ok || !!busy} onClick={() => call('chat', () => api.post(`${V1}/games/${game.id}/chat`, { to: chat || 'me', text }), 'Sent to Pocket Chat')}>{busy === 'chat' ? <Spinner /> : <Icon name="send" size={14} />}Send</button></div>
         </>}
         {tab === 'email' && <>
-          <AppHint slug="email" scope="mail:send" />
+          <AppHint slug="mail" scope="mail:send" />
           <Field label="To" help={state('contacts', 'contacts:read').ok ? 'Type a name from your contacts, or an email address and press Enter.' : 'Type an email address and press Enter.'}>
             <div className="stack">
               {to.length > 0 && <div className="chips">{to.map(t => <span key={t.email} className="chip on">{t.name || t.email}<button type="button" className="plain" aria-label="Remove" onClick={() => setTo(to.filter(x => x !== t))}><Icon name="x" size={12} /></button></span>)}</div>}
@@ -217,7 +217,7 @@ export function ShareDialog({ game, onClose, onChange }: { game: Game; onClose: 
           </Field>
           <Field label="Message"><textarea rows={3} value={text} onChange={e => setText(e.target.value)} placeholder="I made a game and I'd like you to play it." /></Field>
           {sendNote}
-          <div className="row"><button type="button" className="btn primary" disabled={!state('email', 'mail:send').ok || !to.length || !!busy} onClick={() => call('email', () => api.post(`${V1}/games/${game.id}/email`, { to, text }), 'Email sent')}>{busy === 'email' ? <Spinner /> : <Icon name="send" size={14} />}Send</button></div>
+          <div className="row"><button type="button" className="btn primary" disabled={!state('mail', 'mail:send').ok || !to.length || !!busy} onClick={() => call('email', () => api.post(`${V1}/games/${game.id}/email`, { to, text }), 'Email sent')}>{busy === 'email' ? <Spinner /> : <Icon name="send" size={14} />}Send</button></div>
         </>}
         {tab === 'post' && <>
           <Field label="A few words (optional)"><textarea rows={3} value={text} onChange={e => setText(e.target.value)} placeholder="What the game is, how you made it, what you want to hear back." /></Field>

@@ -17,7 +17,7 @@ type TabId = 'general' | 'notifications' | 'apps' | 'ai' | 'profile' | 'people' 
 const TABS: { id: TabId; label: string; icon: string; sub: string }[] = [
   { id: 'general', label: 'General', icon: 'settings', sub: 'How the editor works, your name on shared games, new games — and dates and the app title.' },
   { id: 'notifications', label: 'Notifications', icon: 'bell', sub: 'What reaches your phone: someone beat a best score, how often your games were played.' },
-  { id: 'apps', label: 'Connected apps', icon: 'link', sub: 'Photos, Files, Draw, Photo Lab, Music, Voice, Translate, Puzzlecraft, Blog, Chat, Forum, Email, Contacts, Tasks, Projects, Notes, Calendar, Family and Alerts.' },
+  { id: 'apps', label: 'Connected apps', icon: 'link', sub: 'Photos, Files, Draw, Photo Lab, Music, Voice, Translate, Puzzlecraft, Blog, Chat, Forum, Mail, Contacts, Tasks, Projects, Notes, Calendar, Family and Alerts.' },
   { id: 'ai', label: 'AI', icon: 'sparkles', sub: 'Who helps you: Pocket AI through Core, or your own OpenAI key.' },
   { id: 'profile', label: 'Profile', icon: 'user', sub: 'Your name, email and password.' },
   { id: 'people', label: 'People', icon: 'users', sub: 'Everyone who has an account on this box. Each person has their own games, pictures and sounds.' },
@@ -180,7 +180,7 @@ const APPS: { slug: AppSlug; title: string; sub: string; token: string; port: st
   { slug: 'blog', title: 'Pocket Blog — write about a game', sub: 'A draft post with the game’s picture and the link to play.', token: 'Pocket Blog → Settings → API tokens', port: '8246' },
   { slug: 'chat', title: 'Pocket Chat — send a game', sub: 'Send the link to play to a chat.', token: 'Pocket Chat → Settings → API tokens', port: '8247' },
   { slug: 'forum', title: 'Pocket Forum — ask what people think', sub: 'Start a topic about a game in a forum.', token: 'Pocket Forum → Settings → API tokens', port: '8267' },
-  { slug: 'email', title: 'Pocket Email — send a game', sub: 'Email someone the link to play.', token: 'Pocket Email → Settings → API tokens', port: '8226' },
+  { slug: 'mail', title: 'Pocket Mail — send a game', sub: 'Email someone the link to play.', token: 'Pocket Mail → Settings → API tokens', port: '8226' },
   { slug: 'contacts', title: 'Pocket Contacts — who to send to', sub: 'Choose people from your address book.', token: 'Pocket Contacts → Settings → API tokens', port: '8191' },
   { slug: 'tasks', title: 'Pocket Tasks — what is still to do', sub: 'Put a game’s to-dos in your task list.', token: 'Pocket Tasks → Settings → API tokens', port: '8181' },
   { slug: 'projects', title: 'Pocket Projects — issues', sub: 'A bug someone found, or the next thing to build, as an issue.', token: 'Pocket Projects → Settings → API tokens', port: '8197' },

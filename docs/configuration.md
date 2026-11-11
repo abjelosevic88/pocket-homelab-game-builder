@@ -23,7 +23,7 @@ Environment variables; every one has a default. Personal settings (how the edito
 | `DEMO_DATA` | `false` | Seed seven games (jump and run, maze, shooter, catch, quiz, brick breaker and one with drawn sprites), five of them shared, two months of plays by friends with best scores, and to-dos |
 | `LOG_LEVEL` / `LOG_FORMAT` | `info` / `text` | |
 
-Connections to Pocket Photos, Files, Draw, Photo Lab, Music, Voice, Translate, Puzzlecraft, Blog, Chat, Forum, Email, Contacts, Tasks, Projects, Notes, Calendar, Family and Alerts are made per person under Settings → Connected apps (through Pocket Core with nothing to paste, or directly with a URL and an API token).
+Connections to Pocket Photos, Files, Draw, Photo Lab, Music, Voice, Translate, Puzzlecraft, Blog, Chat, Forum, Mail, Contacts, Tasks, Projects, Notes, Calendar, Family and Alerts are made per person under Settings → Connected apps (through Pocket Core with nothing to paste, or directly with a URL and an API token).
 
 ## Shared games
 
