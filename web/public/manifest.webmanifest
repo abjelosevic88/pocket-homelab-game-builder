@@ -1,0 +1,51 @@
+{
+  "name": "Pocket Game Builder",
+  "short_name": "Game Builder",
+  "description": "Make your own small games without code, play them and share a link anyone can play.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f6f8",
+  "theme_color": "#0b84c6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "My games",
+      "url": "/"
+    },
+    {
+      "name": "Make a game",
+      "url": "/?new=idea"
+    },
+    {
+      "name": "Pictures & sounds",
+      "url": "/library"
+    }
+  ]
+}

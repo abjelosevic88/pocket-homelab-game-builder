@@ -1,0 +1,41 @@
+/* The game box: shared by the editor, the shared page and saved games. */
+.gb-player { position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; outline: none; user-select: none; -webkit-user-select: none; touch-action: none; -webkit-tap-highlight-color: transparent; }
+.gb-canvas { display: block; border-radius: 6px; background: #111; box-shadow: 0 6px 28px rgba(0,0,0,.25); touch-action: none; }
+.gb-overlay { position: absolute; left: 50%; top: 50%; width: var(--gb-w); height: var(--gb-h); transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; pointer-events: none; opacity: 0; transition: opacity .2s; }
+.gb-overlay.show { opacity: 1; pointer-events: auto; }
+.gb-card { pointer-events: auto; background: rgba(18, 22, 36, .9); color: #fff; border-radius: 14px; padding: 18px 20px; max-width: min(92%, 380px); max-height: 92%; overflow: auto; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,.35); font: 15px/1.4 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif; }
+.gb-title { margin: 0 0 6px; font-size: 20px; line-height: 1.2; font-weight: 800; }
+.gb-text { margin: 0 0 12px; opacity: .88; }
+.gb-big { font-size: 34px; line-height: 1; margin-bottom: 6px; }
+.gb-score { margin: 0 0 12px; font-size: 17px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.gb-go { appearance: none; border: 0; border-radius: 999px; padding: 10px 26px; font: inherit; font-weight: 800; font-size: 16px; color: #10131f; background: #ffd43b; cursor: pointer; box-shadow: 0 3px 0 #c99a06; }
+.gb-go:hover { background: #ffe066; }
+.gb-go:active { transform: translateY(2px); box-shadow: 0 1px 0 #c99a06; }
+.gb-pad { position: absolute; inset: 0; pointer-events: none; }
+.gb-btn { position: absolute; pointer-events: auto; width: 58px; height: 58px; border-radius: 50%; border: 2px solid rgba(255,255,255,.55); background: rgba(20,24,40,.38); color: #fff; font-size: 22px; line-height: 1; display: flex; align-items: center; justify-content: center; touch-action: none; backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
+.gb-btn.on { background: rgba(255,255,255,.35); }
+.gb-btn.l { left: 12px; bottom: 14px; }
+.gb-btn.r { left: 80px; bottom: 14px; }
+.gb-btn.a { right: 14px; bottom: 22px; width: 68px; height: 68px; background: rgba(255,212,59,.45); }
+.gb-pad[data-layout="dpad"] .gb-btn.l { left: 10px; bottom: 62px; }
+.gb-pad[data-layout="dpad"] .gb-btn.r { left: 118px; bottom: 62px; }
+.gb-pad[data-layout="dpad"] .gb-btn.u { left: 64px; bottom: 112px; }
+.gb-pad[data-layout="dpad"] .gb-btn.d { left: 64px; bottom: 10px; }
+.gb-form { display: flex; gap: 6px; justify-content: center; margin: 0 0 12px; flex-wrap: wrap; }
+.gb-form input { font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.1); color: #fff; width: 150px; }
+.gb-form button { font: inherit; padding: 8px 12px; border-radius: 8px; border: 0; background: #4dabf7; color: #fff; font-weight: 700; cursor: pointer; }
+.gb-best { list-style: none; margin: 0 0 12px; padding: 0; text-align: left; font-variant-numeric: tabular-nums; }
+.gb-best li { display: flex; justify-content: space-between; gap: 12px; padding: 3px 4px; border-radius: 6px; }
+.gb-best li.me { background: rgba(255,212,59,.22); }
+.gb-best li span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gb-note { font-size: 13px; opacity: .8; margin: 0 0 10px; }
+.gb-pad { inset: auto; left: 50%; top: 50%; width: var(--gb-w); height: var(--gb-h); transform: translate(-50%, -50%); }
+.gb-player.pad-below { align-items: flex-start; }
+.gb-player.pad-below .gb-overlay { top: 0; transform: translateX(-50%); }
+.gb-player.pad-below .gb-pad { top: calc(var(--gb-h) + 14px); height: 110px; transform: translateX(-50%); }
+.gb-player.pad-below .gb-btn.l, .gb-player.pad-below .gb-btn.r { bottom: auto; top: 20px; }
+.gb-player.pad-below .gb-btn.a { bottom: auto; top: 14px; }
+.gb-player.pad-below .gb-pad[data-layout="dpad"] .gb-btn.u { top: 0; bottom: auto; }
+.gb-player.pad-below .gb-pad[data-layout="dpad"] .gb-btn.l, .gb-player.pad-below .gb-pad[data-layout="dpad"] .gb-btn.r { top: 40px; }
+.gb-player.pad-below .gb-pad[data-layout="dpad"] .gb-btn.d { top: 80px; bottom: auto; }
+.gb-player.pad-below .gb-pad[data-layout="dpad"] { height: 150px; }
