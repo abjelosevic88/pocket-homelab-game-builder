@@ -35,6 +35,8 @@ Everything the app does goes through `/api/v1` with JSON. Sign in with the sessi
 
 Through Pocket Core, other apps act for a person with the link scopes `gamebuilder:read` (everything above that reads) and `gamebuilder:write` (`POST /games`, `POST /ai/game`, `POST /games/ID/todos`, and changing or removing only what that app made). Events: `gamebuilder.game_made`, `gamebuilder.game_shared`, `gamebuilder.played`, `gamebuilder.best_score`.
 
+Pocket Move can copy your games out and bring them in: `GET /pocket/portable` describes `GET /export.json` (everything you made; `POST /import` takes it back and adds only what is not there yet) and `GET /export.csv` (your plays), under the link scopes `move:export` and `move:import`.
+
 ## The game itself (`doc`)
 
 ```json

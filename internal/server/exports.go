@@ -254,5 +254,9 @@ func (s *Server) importDoc(r *http.Request, uid int64, doc *exportDoc) (map[stri
 			added["plays"]++
 		}
 	}
-	return map[string]any{"added": added}, nil
+	out := map[string]any{"added": added}
+	for k, v := range added { // at the top level too: what Pocket Move shows
+		out[k] = v
+	}
+	return out, nil
 }
